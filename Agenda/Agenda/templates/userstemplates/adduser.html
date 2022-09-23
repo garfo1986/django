@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <title>Agenda</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <head>
+
+        <h2>Add a contact</h2>
+        <style>
+            h2{
+                color: blue;
+                text-align:center;
+            }
+            input{
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            #addContact{
+                border: none;
+                background: blue;
+                color: white;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+
+            }
+            .xform{
+                margin: 0 auto;
+                width: 30%;
+                background: cyan;
+                padding: 20px;
+                
+            }
+        </style>
+        
+    </head>
+
+    <body>
+   
+        
+
+    <form class="xform" action= "addusersend/" method="POST">{%csrf_token %}
+    
+        <input type="text"id="txtName" name="txtName" class="form-control" placeholder="Name" minlength="1" maxlength="50"required>
+
+        <input type="text"id="txtLastName" name="txtLastName" class="form-control" placeholder="last_Name" minlength="1" maxlength="50"required>
+    
+        <input type="text"id="txtEmail" name="txtEmail" class="form-control" placeholder="Email" maxlength="50"required>
+
+        <input type="password"id="txtPassword" name="txtPassword" class="form-control" placeholder="password"  minlength="4" maxlength="12"required>
+
+        <button id="addContact" type="submit">Save</button>
+        
+
+    </form-action> 
+
+    </body>
+
+</html>

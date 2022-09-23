@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <title>Agenda</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <head>
+
+        <h2>Identify yourself</h2>
+        <style>
+            h2{
+                color: blue;
+                text-align:center;
+            }
+            input{
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            #addContact{
+                border: none;
+                background: blue;
+                color: white;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+
+            }
+            .xform{
+                margin: 0 auto;
+                width: 30%;
+                background: cyan;
+                padding: 20px;
+                
+            }
+        </style>
+        
+    </head>
+
+    <body>
+   
+        
+    
+    <p>you are <strong>{{query}}</strong></p>
+    <p>the password is <strong>{{query2}}</strong></p>
+
+    {% if user%}
+        
+        <ul>
+            {%for user in user%}
+                <li>
+                    {{user.email}}
+                    {{user.password}}
+
+                </li>
+
+            {%endfor %}
+        </ul>    
+    
+    {%else%}
+        <p>Email not found</p>
+
+    {%endif %}
+
+    </form-action> 
+
+    </body>
+
+</html>
